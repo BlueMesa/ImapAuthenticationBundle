@@ -48,7 +48,7 @@ class ImapFactory extends AbstractFactory
 
         $node
             ->children()
-                ->scalarNode('csrf_provider')->cannotBeEmpty()->end()
+                ->scalarNode('csrf_manager')->cannotBeEmpty()->end()
             ->end()
             ;
     }
@@ -98,10 +98,10 @@ class ImapFactory extends AbstractFactory
     {
         $listenerId = parent::createListener($container, $id, $config, $userProvider);
 
-        if (isset($config['csrf_provider'])) {
+        if (isset($config['csrf_manager'])) {
             $container
                 ->getDefinition($listenerId)
-                ->addArgument(new Reference($config['csrf_provider']))
+                ->addArgument(new Reference($config['csrf_manager']))
                 ;
         }
 
