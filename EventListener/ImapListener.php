@@ -65,7 +65,7 @@ class ImapListener extends AbstractAuthenticationListener
                 'username_parameter' => '_username',
                 'password_parameter' => '_password',
                 'csrf_parameter'     => '_csrf_token',
-                'csrf_token_id'      => 'imap_authenticate',
+                'csrf_token_id'      => 'authenticate',
                 'post_only'          => true,
             ), $options),
             $logger,

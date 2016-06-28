@@ -19,7 +19,7 @@ class ImapFactory extends AbstractFactory
         $this->addOption('username_parameter', '_username');
         $this->addOption('password_parameter', '_password');
         $this->addOption('csrf_parameter', '_csrf_token');
-        $this->addOption('csrf_token_id', 'imap_authenticate');
+        $this->addOption('csrf_token_id', 'authenticate');
         $this->addOption('post_only', true);
     }
 
